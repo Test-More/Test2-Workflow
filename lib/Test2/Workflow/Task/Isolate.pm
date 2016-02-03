@@ -3,7 +3,6 @@ use strict;
 use warnings;
 
 use Carp        qw/confess/;
-use Test2::Util qw/try/;
 use Test2::API qw/test2_stack/;
 
 use parent 'Test2::Workflow::Task';
@@ -42,6 +41,3 @@ sub _run_primary {
 }
 
 1;
-
-
-
