@@ -583,7 +583,7 @@ blocks. This can be done, and is lexical to your describe or package root!
 
     tests foo, {iso => 0}, sub { ... }; # Not isolated
 
-    spec_Defaults tests => (iso => 0); # Turn it off again
+    spec_defaults tests => (iso => 0); # Turn it off again
 
 Defaults are inherited by nested describe blocks. You can also override the
 defaults for the scope of the describe:
@@ -602,8 +602,7 @@ You can apply defaults to any type of blocks:
 
     spec_defaults case => (iso => 1); # All cases are 'iso';
 
-Defaults are not inherited when a builder is constructed instead of added to
-the current build:
+Defaults are not inherited when a builder's return is captured.
 
     spec_defaults tests => (iso => 1);
 
